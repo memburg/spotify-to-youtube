@@ -7,4 +7,9 @@ class SpotifyLocators:
     INPUT_PASSWORD = By.ID, "login-password"
     SUBMIT_LOGIN = By.ID, "login-button"
     BTN_PLAYLISTS = By.XPATH, "//button[span[text()='Playlists']]"
-    PLAYLISTS_TITLES = By.XPATH, "//span[contains(@class, 'ListRowTitle')]"
+    PLAYLISTS_TITLES = By.XPATH, "//a[contains(@href, 'playlist') and @title]"
+    BTN_PLAYLISTS_CHECKED = (
+        By.XPATH,
+        "//button[span[text()='Playlists'] and @aria-checked='true']",
+    )
+    PLAYLISTS_H2 = By.XPATH, "//h2[text()='Public Playlists']"
