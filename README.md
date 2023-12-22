@@ -1,8 +1,10 @@
 <h1 align="center">Spotify to YouTube</h1>
 
 <p align="center">
+    <a href="https://www.python.org/"><img alt="Language: Python" src="https://img.shields.io/badge/language-python-3572A5.svg"></a>
     <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-black.svg"></a>
-    <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+    <a href="https://www.selenium.dev/"><img alt="Automation Tool: Selenium" src="https://img.shields.io/badge/browser%20automation-selenium-43b02a.svg"></a>
+    <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg"></a>
 </p>
 
 > "Why not?"
