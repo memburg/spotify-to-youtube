@@ -21,3 +21,6 @@ class BrowserUtils:
 
     def send_keys(self, locator: Tuple[str, str], keys: str) -> None:
         self.driver.find_element(*locator).send_keys(keys)
+
+    def get_elements(self, locator: str) -> list[WebElement]:
+        pass
