@@ -15,3 +15,9 @@ class SpotifyLocators:
     PLAYLISTS_H2 = By.XPATH, "//h2[text()='Public Playlists']"
     PLAYLIST_TITLE = By.XPATH, "//h1[@dir='auto']"
     DYNAMIC_PLAYLIST = [By.XPATH, ""]
+    TRACKS = By.XPATH, "//a[contains(@href, 'track')]"
+    NUMBER_OF_SONGS = By.XPATH, "//span[contains(text(), 'songs')]"
+    ARTITS = (
+        By.XPATH,
+        "//a[contains(@href, 'artist/') and not(following-sibling::a[contains(@href, 'artist')])]",
+    )

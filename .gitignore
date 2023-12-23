@@ -2,3 +2,4 @@ venv
 src/creds.py
 .pytest_cache
 **/__pycache__
+playlists/*
