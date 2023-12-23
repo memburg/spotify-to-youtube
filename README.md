@@ -15,6 +15,12 @@ This little project is to take all my music from Spotify to YouTube, I'm thinkin
 - [ ] Store all this data in CSV (?).
 - [ ] Use the YouTube API (?) [maybe Selenium] to create the playlists based on the collected data.
 
+## Observations
+
+I'm kinda an idiot and I got blocked by Spotify, I didn't know I could retrieve public playlists without loging in.
+
+I will proceed to scrap the data without login in.
+
 ## Install
 
 Make sure you activated the virtual environment.
