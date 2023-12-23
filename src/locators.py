@@ -13,3 +13,5 @@ class SpotifyLocators:
         "//button[span[text()='Playlists'] and @aria-checked='true']",
     )
     PLAYLISTS_H2 = By.XPATH, "//h2[text()='Public Playlists']"
+    PLAYLIST_TITLE = By.XPATH, "//h1[@dir='auto']"
+    DYNAMIC_PLAYLIST = [By.XPATH, ""]

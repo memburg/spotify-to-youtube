@@ -2,6 +2,7 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.remote.webdriver import WebElement
 
 from creds import spotify
 from browser_utils import BrowserUtils
@@ -33,9 +34,22 @@ if __name__ == "__main__":
         browser_utils.wait_until_page_is_loaded()
         browser_utils.wait_until_element_is_visible(SpotifyLocators.PLAYLISTS_H2)
 
-        SpotifyUtils.extract_playlists(
+        playlists: list[str] = SpotifyUtils.extract_playlists(
             browser_utils.get_elements(SpotifyLocators.PLAYLISTS_TITLES)
         )
+
+        for playlist in playlists:
+            SpotifyLocators.DYNAMIC_PLAYLIST[1] = f"//a[@title='{playlist}']"
+            dynamic_locator = tuple(SpotifyLocators.DYNAMIC_PLAYLIST)
+            browser_utils.wait_until_element_is_clickable(dynamic_locator)
+            browser_utils.click_element(dynamic_locator)
+            browser_utils.wait_until_element_is_visible(SpotifyLocators.PLAYLIST_TITLE)
+
+            # do all the magic to extract the data here...
+
+            browser_utils.go_back()
+            browser_utils.wait_until_element_is_visible(SpotifyLocators.PLAYLISTS_H2)
+
     except Exception as e:
         print(f"There was an unexpected error :(\n\n{e}")
     finally:
