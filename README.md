@@ -11,8 +11,8 @@
 
 This little project is to take all my music from Spotify to YouTube, I'm thinking about not paying Spotify anymore ¯\_(ツ)_/¯.
 
-- [ ] Extract all the playlists data from Spotify (scrap it, don't use its API, there are legal implications).
-- [ ] Store all this data in CSV (?).
+- [x] Extract all the playlists data from Spotify (scrap it, don't use its API, there are legal implications).
+- [x] Store all this data in CSV.
 - [ ] Use the YouTube API (?) [maybe Selenium] to create the playlists based on the collected data.
 
 ## Observations

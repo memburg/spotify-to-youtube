@@ -17,7 +17,8 @@ class SpotifyLocators:
     DYNAMIC_PLAYLIST = [By.XPATH, ""]
     TRACKS = By.XPATH, "//a[contains(@href, 'track')]"
     NUMBER_OF_SONGS = By.XPATH, "//span[contains(text(), 'songs')]"
-    ARTITS = (
+    ARTISTS = (
         By.XPATH,
-        "//a[contains(@href, 'artist/') and not(following-sibling::a[contains(@href, 'artist')])]",
+        "//a[contains(@href, 'artist/') and not(preceding-sibling::a[contains(@href, 'artist')])]",
     )
+    TRACK_LIST_ROW = By.XPATH, "//div[@data-testid='tracklist-row']"

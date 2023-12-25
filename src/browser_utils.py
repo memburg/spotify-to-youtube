@@ -25,8 +25,8 @@ class BrowserUtils:
     ) -> None:
         self.wait.until(EC.element_to_be_clickable(locator))
 
-    def wait_until_element_is_visible(self, locator: Tuple[str, str]) -> None:
-        self.wait.until(EC.visibility_of_element_located(locator))
+    def wait_until_element_is_present(self, locator: Tuple[str, str]) -> None:
+        self.wait.until(EC.presence_of_element_located(locator))
 
     def send_keys(self, locator: Tuple[str, str], keys: str) -> None:
         self.driver.find_element(*locator).send_keys(keys)
